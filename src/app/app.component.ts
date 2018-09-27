@@ -40,8 +40,8 @@ export class MyApp {
     public translate: TranslateService,
     public toastCtrl: ToastController
   ) {
-    translate.setDefaultLang('en');
-    translate.use('en');
+    translate.setDefaultLang('es');
+    translate.use('es');
 
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.

@@ -8,61 +8,84 @@
 
 <ion-content class="walkthrough-content">
   <ion-slides #slider (ionSlideDidChange)="onSlideChanged()" pager="true">
+
+    <!-- Slide 1: Welcome -->
     <ion-slide class="slide-1">
       <ion-row class="intro-image-row">
         <ion-col center width-64 no-padding>
-          <preload-image [ratio]="{w:1, h:1}" src="./assets/images/logo_white.png" alt="app logo" title="ion2FullApp"></preload-image>
+          <preload-image [ratio]="{w:1, h:1}" src="./assets/images/logo_white.png" alt="CEMARQBCNApp. Aplicación para gestión del mobiliario urbano de la ciudad de Barcelona. Asociación Cercle d'Amics de l'Arquitectura de Barcelona." title="CEMARQBCNApp. Aplicación para gestión del mobiliario urbano de la ciudad de Barcelona. Asociación Cercle d'Amics de l'Arquitectura de Barcelona."></preload-image>
         </ion-col>
       </ion-row>
-      <h2 class="main-title">{{'WELCOME!' | translate}}</h2>
+      <h2 class="main-title">{{'WELCOME' | translate}}</h2>
       <p class="intro-text">
-        This is the new <b>Ionic 3</b> Full App Template
+        {{ 'WALKTHROUGH-INTRO-TEXT' | translate }} <strong>{{ 'BARCELONA' | translate }}</strong>
       </p>
-      <p class="intro-text">
-        ELITE version
+      <p class="cemarqbcn-colaboran">
+          {{ 'COLLABORATE' | translate | uppercase }}
       </p>
+      <ion-row>
+          <ion-col center width-12 padding>
+            <preload-image [ratio]="{w:1, h:1}" src="./assets/images/ayto-bcn-generalitat-catalunya-logos-white.png" alt="Ajuntament de Barcelona y Generalitat de Catalunya"></preload-image>
+          </ion-col>
+        </ion-row>
     </ion-slide>
+    <!-- Slide 2: Bench Management-->
     <ion-slide class="slide-2">
       <ion-row class="intro-image-row">
         <ion-col center width-64 no-padding>
-          <preload-image [ratio]="{w:1, h:1}" src="./assets/images/slide-2-img.png" alt="slide 2 img" title="ion2FullApp"></preload-image>
+          <preload-image [ratio]="{w:1, h:1}" src="./assets/images/bench-status.png" alt="Podrás consultar la información de cada mobiliario y su estado" title="Podrás consultar la información de cada mobiliario y su estado"></preload-image>
         </ion-col>
       </ion-row>
-      <h2 class="main-title">{{'WAKE_UP!' | translate}}</h2>
+      <h2 class="main-title">{{ 'BENCH-MANAGEMENT-TITLE' | translate }}</h2>
       <p class="intro-text">
-        We should get started.
-      </p>
-      <p class="intro-text">
-        Here we have a beautiful walkthrough
+        {{ 'BENCH-MANAGEMENT-TEXT' | translate }} <strong>{{ 'BENCH-MANAGEMENT-TEXT-IMPORTANT' | translate}}</strong>.
       </p>
     </ion-slide>
+
+    <!-- Slide 3: Find bench locations in map -->
     <ion-slide class="slide-3">
       <ion-row class="intro-image-row">
         <ion-col center width-64 no-padding>
-          <preload-image [ratio]="{w:1, h:1}" src="./assets/images/slide-3-img.png" alt="slide 3 img" title="ion2FullApp"></preload-image>
+          <preload-image [ratio]="{w:1, h:1}" src="./assets/images/search-bench-locations.png" alt="Usa el mapa para localizar la ubicación de cada pieza de mobiliario" title="Usa el mapa para localizar la ubicación de cada pieza de mobiliario"></preload-image>
         </ion-col>
       </ion-row>
-      <h2 class="main-title">{{'GET_READY!' | translate}}</h2>
+      <h2 class="main-title">{{'SEARCH-BENCH-LOCATION-TITLE' | translate}}</h2>
       <p class="intro-text">
-        Soon your app will look and feel awesome!
+        {{ 'SEARCH-BENCH-LOCATION-TEXT-1' | translate }} <strong>{{ 'GOOGLE-MAPS-IMPORTANT' | translate }}</strong> {{ 'SEARCH-BENCH-LOCATION-TEXT-2' | translate }} <strong>{{ 'SEARCH-BENCH-LOCATION-TEXT-3-IMPORTANT' | translate }}</strong>.
       </p>
     </ion-slide>
+    <!-- Slide 4: Set your favourite bench-->
     <ion-slide class="slide-4">
       <ion-row class="intro-image-row">
         <ion-col center width-64 no-padding>
-          <preload-image [ratio]="{w:1, h:1}" src="./assets/images/slide-4-img.png" alt="slide 4 img" title="ion2FullApp"></preload-image>
+          <preload-image [ratio]="{w:1, h:1}" src="./assets/images/favourite-bench.png" alt="Si lo deseas, puedes seleccionar tus bancos favoritos" title="Si lo deseas, puedes seleccionar tus bancos favoritos"></preload-image>
         </ion-col>
       </ion-row>
-      <h2 class="main-title">{{'ALMOST_DONE!' | translate}}</h2>
+      <h2 class="main-title">{{'FAVOURITE-BENCH-TITLE' | translate }}</h2>
       <p class="intro-text">
-        Log in to your account.
+          {{ 'FAVOURITE-BENCH-TEXT1' | translate }} <strong>{{ 'FAVOURITE-BENCH-TEXT2-IMPORTANT' | translate }}</strong> <u>{{ 'FAVOURITE-BENCH-TEXT3' | translate }}</u>.
       </p>
-      <p class="intro-text">
-        We are ready to rock!
-      </p>
+      </ion-slide>
+      <!-- Slide 5: XXX ...-->
+      <ion-slide class="slide-4">
+        <ion-row class="intro-image-row">
+            <ion-col center width-64 no-padding>
+              <preload-image [ratio]="{w:1, h:1}" src="./assets/images/favourite-bench.png" alt="Si lo deseas, puedes seleccionar tus bancos favoritos" title="Si lo deseas, puedes seleccionar tus bancos favoritos"></preload-image>
+            </ion-col>
+          </ion-row>
+          <h2 class="main-title">{{'FAVOURITE-BENCH-TITLE' | translate }}</h2>
+          <p class="intro-text">
+              {{ 'FAVOURITE-BENCH-TEXT1' | translate }} <strong>{{ 'FAVOURITE-BENCH-TEXT2-IMPORTANT' | translate }}</strong> {{ 'FAVOURITE-BENCH-TEXT3' | translate }}
+          </p>
       <div class="button-bar">
-        <button ion-button primary (click)="goToLogin()">{{'LOG_IN' | translate}}</button>
-        <button ion-button primary (click)="goToSignup()">{{'SIGN_UP' | translate}}</button>
+        <button 
+          (click)="goToLogin()"
+          ion-button 
+          primary>{{'LOG_IN' | translate}}</button>
+        <button 
+          (click)="goToSignup()"
+          ion-button 
+          primary>{{'SIGN_UP' | translate}}</button>
       </div>
     </ion-slide>
   </ion-slides>
